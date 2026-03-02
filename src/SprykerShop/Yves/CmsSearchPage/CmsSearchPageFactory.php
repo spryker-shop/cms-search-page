@@ -12,9 +12,6 @@ use SprykerShop\Yves\CmsSearchPage\Dependency\Client\CmsSearchPageToCmsPageSearc
 
 class CmsSearchPageFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\CmsSearchPage\Dependency\Client\CmsSearchPageToCmsPageSearchClientInterface
-     */
     public function getCmsPageSearchClient(): CmsSearchPageToCmsPageSearchClientInterface
     {
         return $this->getProvidedDependency(CmsSearchPageDependencyProvider::CLIENT_CMS_SEARCH_PAGE);

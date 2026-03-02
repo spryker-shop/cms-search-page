@@ -20,11 +20,6 @@ class CmsSearchPageControllerProvider extends AbstractYvesControllerProvider
      */
     public const ROUTE_SEARCH = 'search-cms';
 
-    /**
-     * @param \Silex\Application $app
-     *
-     * @return void
-     */
     protected function defineControllers(Application $app): void
     {
         $this->addFulltextSearchRoute();

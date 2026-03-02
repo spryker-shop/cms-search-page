@@ -41,11 +41,6 @@ class CmsSearchPageRouteProviderPlugin extends AbstractRouteProviderPlugin
         return $routeCollection;
     }
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
     protected function addFulltextSearchRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/search/cms', 'CmsSearchPage', 'CmsSearch', 'fulltextSearchAction');

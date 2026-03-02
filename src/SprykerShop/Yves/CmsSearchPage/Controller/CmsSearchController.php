@@ -16,11 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class CmsSearchController extends AbstractController
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Spryker\Yves\Kernel\View\View
-     */
     public function fulltextSearchAction(Request $request): View
     {
         $viewData = $this->executeFulltextSearchAction($request);
@@ -32,11 +27,6 @@ class CmsSearchController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return array
-     */
     protected function executeFulltextSearchAction(Request $request): array
     {
         $searchString = (string)$request->query->get('q', '');

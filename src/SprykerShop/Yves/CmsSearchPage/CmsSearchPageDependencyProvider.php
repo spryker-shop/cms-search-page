@@ -18,11 +18,6 @@ class CmsSearchPageDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const CLIENT_CMS_SEARCH_PAGE = 'CLIENT_CMS_SEARCH_PAGE';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->addCmsSearchPageClient($container);
@@ -30,11 +25,6 @@ class CmsSearchPageDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCmsSearchPageClient(Container $container): Container
     {
         $container->set(static::CLIENT_CMS_SEARCH_PAGE, function (Container $container) {
