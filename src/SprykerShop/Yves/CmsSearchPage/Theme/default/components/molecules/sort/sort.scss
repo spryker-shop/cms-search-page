@@ -1,5 +1,11 @@
+@use 'sass:meta';
+
 @mixin cms-search-page-sort($name: '.sort') {
     #{$name} {
+        @if meta.mixin-exists(cms-search-page-sort-base-hook) {
+            @include cms-search-page-sort-base-hook;
+        }
+
         &__col:not(:last-child) {
             padding-right: 0.5rem;
         }
@@ -15,6 +21,10 @@
     @include cms-search-page-sort();
 
     #{$name} {
+        @if meta.mixin-exists(cms-page-sort-base-hook) {
+            @include cms-page-sort-base-hook;
+        }
+
         @content;
     }
 }
